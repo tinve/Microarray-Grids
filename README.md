@@ -6,9 +6,9 @@ Single grid processing
 I have a rectangular (but not regular grid). For example, a 3x4 grid like this one:
 
   o------o------o------o  
-  |------|------|------|
+ 
   o------o------o------o  
-  |------|------|------|
+  
   o------o------o------o  
   
 It has twelve points (called target points) and each of them has X (or fast) and Y (or slow) coordinate. Grid is rectangular, so coordinates repeat from row to row of from column to column, but it is not regular, so the spacing between the rows or columns can vary.
@@ -50,9 +50,9 @@ Point Grid
 Now I need to add so called reference points in the fast direction, i.e. points in between each neighboring target points:
 
 x o--x--o--x--o--x--o x  
-  |     |     |     |  
+
 x o--x--o--x--o--x--o x  
-  |     |     |     |  
+  
 x o--x--o--x--o--x--o x  
 
 Intermediate points are exactly in the middle, distance to edge reference points is given in pixels.
