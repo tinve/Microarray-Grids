@@ -100,8 +100,5 @@ for coord in readout_slow:
     else:
         fs.write("%f\n" % coord)
 
-#numpy.savetxt("readout_fast.txt", readout_fast, fmt = "%f", delimiter = "\n")
-#numpy.savetxt("readout_slow.txt", readout_slow, fmt = "%f", delimiter = "\n")
-
 ff.close()
 fs.close()
