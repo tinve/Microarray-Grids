@@ -6,9 +6,9 @@ Single grid processing
 I have a rectangular (but not regular grid). For example, a 3x4 grid like this one:
 
   o------o------o------o  
-  |      |      |      |  
+  |------|------|------|
   o------o------o------o  
-  |      |      |      |  
+  |------|------|------|
   o------o------o------o  
   
 It has twelve points (called target points) and each of them has X (or fast) and Y (or slow) coordinate. Grid is rectangular, so coordinates repeat from row to row of from column to column, but it is not regular, so the spacing between the rows or columns can vary.
@@ -80,7 +80,7 @@ I also need array of nine X coordinates in physical units, prepended by the numb
 And I need three duplicates of this array binded together and recorded to a single text file.
 
 Multiple grid processing
-Read grid files from a given directory, produce fast _ readout and slow _ readout for each of them and 
+Read grid files from a given directory, produce fast _ readout and slow _ readout for each of them and bind fast with fast and slow with slow into two text files.
 
 
 
