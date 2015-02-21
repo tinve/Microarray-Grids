@@ -15,6 +15,14 @@ new_directory = "shifted"
 
 
 def grid_shift(path, directory_path, x_shift = 0, y_shift = 0):
+    '''
+
+    :param path:
+    :param directory_path:
+    :param x_shift:
+    :param y_shift:
+    :return:
+    '''
 
 # reads txt grid file, extracts fast and slow coordinates, shifs them by x_shift and y_shift respectively,
 # overwrites the file with the shifted coordinates
@@ -41,17 +49,17 @@ def grid_shift(path, directory_path, x_shift = 0, y_shift = 0):
 
 files = os.listdir(directory)
 files.sort()
+files = [os.path.join(directory, f_name) for f_name in files]
 
 # make output directory inside grid directory. If it already exists, delete all files inside
 directory_to_write = os.path.join(directory, new_directory)
 
-if os.path.exists(directory_to_write):
+if os.path.isdir(directory_to_write):
     shutil.rmtree(directory_to_write)
-
-os.makedirs(directory_to_write)
-
+os.mkdir(directory_to_write)
 
 # reads each grid file from the directory, generates readout fast and slow sequences and writes to new files
-for f_name in files:
-    grid_shift(os.path.join(directory, f_name), directory_to_write, x_shift, y_shift)
+for f_path in files:
+    if os.path.isfile(f_path):
+        grid_shift(f_path, directory_to_write, x_shift, y_shift)
 
