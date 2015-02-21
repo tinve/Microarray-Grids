@@ -62,7 +62,7 @@ def to_physical(grid, x0 = 0, y0 = 0, pix = 1):
 
 def to_readout(x, margin = 8, pix = 1):
 
-# takes a list of coordinates and inserts intermediate points between each two elements.
+# takes a list of coordinates and inserts intermediate points between each two elements;
 # on edges adds reference points a margin distance away (in pixels)
 
     result = [x[0] - margin*pix]
