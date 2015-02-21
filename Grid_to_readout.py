@@ -90,15 +90,15 @@ fs = open("readout_slow.txt", "w")
 
 for coord in readout_fast:
     if isinstance(coord, int):
-        ff.write("%i\n" % coord)
+        ff.write("%d\n" % coord)
     else:
-        ff.write("%f\n" % coord)
+        ff.write("%.4f\n" % coord)
 
 for coord in readout_slow:
     if isinstance(coord, int):
-        fs.write("%i\n" % coord)
+        fs.write("%d\n" % coord)
     else:
-        fs.write("%f\n" % coord)
+        fs.write("%.4f\n" % coord)
 
 ff.close()
 fs.close()
