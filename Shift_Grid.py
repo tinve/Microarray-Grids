@@ -10,18 +10,16 @@ x_shift = 1.5
 y_shift = -10.0
 
 # directory with grid files
-directory = "test"
-new_directory = "shifted"
+directory = "Grid"
+new_directory = "Shifted"
 
 
 def grid_shift(path, directory_path, x_shift = 0, y_shift = 0):
     '''
 
-    :param path:
-    :param directory_path:
-    :param x_shift:
-    :param y_shift:
-    :return:
+    :param path: path of the grid file
+    :param directory_path: directory to write shifted grid file to
+    :param x_shift, y_shift: shift in pixels
     '''
 
 # reads txt grid file, extracts fast and slow coordinates, shifs them by x_shift and y_shift respectively,
